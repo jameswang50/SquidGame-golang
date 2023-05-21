@@ -1,40 +1,27 @@
-# USAC SQUID GAMES | Cloud-Native Distributed System
+# SQUID GAMES
 
-Sistema distribuido usando Kubernetes, gRPC, PubSub, Kafka, RabbitMQ, Golang, NoSQL DB, Sockets io, etc.
-
-
-# Diagrama general del sistema
-
-![Diagrama](https://i.ibb.co/g63JWMj/SOPES1-PROYECTO2.png)
+Distributed system using Kubernetes, gRPC, PubSub, Kafka, RabbitMQ, Golang, NoSQL DB, Sockets io, etc.
 
 ---
 
-## Información General
-- Curso: Sistemas Operativos 1
-- Segundo Semestre 2021
-- Lenguajes: Golang, Javascript.
-- Grupo 18
+## General information
+- Course: Operating Systems 1
+- Second Semester 2021
+- Languages: Golang, Javascript.
+- Group 18
 
 &nbsp;
 ---
-## Integrantes
-
-|Carné | Nombre |
-|:----:|:----:|
-|201602625| Oscar Alfredo Llamas Lemus|
-|201709309| Jose Alejandro Santizo Cotto|
-|201801628| Sergio Alexander Echigoyen Gómez|
 
 
-## Descripción
+## Description
 
-Se solicita construir un sistema genérico de arquitectura distribuida que muestre estadísticas en tiempo real utilizando Kubernetes y service mesh como Linkerd y otras tecnologías Cloud Native. En la última parte se utilizará una service mesh para dividir el tráfico. Adicionalmente, se añadirá Chaos Mesh para implementar Chaos Engineering. Este proyecto se aplicará a la visualización de los resultados de juegos implementados por los estudiantes.
+It is requested to build a generic system of distributed architecture that shows statistics in real time using Kubernetes and service mesh such as Linkerd and other Cloud Native technologies. In the last part, a service mesh will be used to divide the traffic. Additionally, Chaos Mesh will be added to implement Chaos Engineering. This project will be applied to the visualization of the results of games implemented by the students.
 
 
-## Explicación
+## Explanation
 
-Ingress recibe el tráfico y se redirige a una API que escribe en una cola. Antes de eso, recibe el número de jugadores y elige aleatoriamente un juego de
-algoritmo, para elegir el ganador del juego actual, luego escribe los datos necesarios en la cola. El Worker de Go Queue leerá estos datos primero, luego
-se escribirán en las bases de datos, Redis para los datos en tiempo real en los paneles y MongoDB para los registros de transacciones.
-
+Ingress receives the traffic and is redirected to an API that writes to a queue. Before that, receive the number of players and randomly choose a game from
+algorithm, to choose the winner of the current game, then write the necessary data to the queue. The Go Queue Worker will read this data first, then
+will be written to the databases, Redis for the real-time data in the dashboards and MongoDB for the transaction logs.
 
